@@ -19,7 +19,7 @@ function runCountingEggRowETL(aviIds, targetDate) {
             let allRows = [];
             // Process each Excel file
             for (const aviId of aviIds) {
-                const rows = yield (0, excelUtils_1.readCsvFile)(aviId, targetDate); // Pass targetDate
+                const rows = yield (0, excelUtils_1.readCsvFile)(); // Pass targetDate
                 console.log(`Transformed Data from ${aviId} for date ${targetDate}:`, rows);
                 allRows = allRows.concat(rows); // Combine rows from this file
             }

@@ -9,7 +9,7 @@ export async function runCountingEggRowETL(aviIds: number[], targetDate: string)
 
     // Process each Excel file
     for (const aviId of aviIds) {
-      const rows: EggRowData[] = await readCsvFile(aviId, targetDate); // Pass targetDate
+      const rows: EggRowData[] = await readCsvFile(); // Pass targetDate
       console.log(`Transformed Data from ${aviId} for date ${targetDate}:`, rows);
       allRows = allRows.concat(rows); // Combine rows from this file
     }

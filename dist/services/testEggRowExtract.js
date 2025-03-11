@@ -13,12 +13,9 @@ const excelUtils_1 = require("../utils/excelUtils"); // Ajusta la ruta de acuerd
 function testReadExcel() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            console.log('Leyendo archivo de Excel...');
-            const aviId = 36;
-            const targetDate = '31/7/2022'; // Especifica la fecha objetivo que deseas filtrar
-            const extractedData = yield (0, excelUtils_1.readCsvFile)(aviId, targetDate);
-            console.log(`Datos extraídos del archivo de Excel para la fecha ${targetDate}:`);
-            console.log(extractedData);
+            console.log('Leyendo archivos csv...');
+            const extractedData = yield (0, excelUtils_1.readCsvFile)();
+            //console.log(extractedData);
         }
         catch (error) {
             console.error('Error al leer el archivo Excel:', error);
